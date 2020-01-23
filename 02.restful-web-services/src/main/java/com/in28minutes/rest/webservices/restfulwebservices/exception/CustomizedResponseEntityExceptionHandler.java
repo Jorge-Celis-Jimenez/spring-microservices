@@ -14,6 +14,15 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import com.in28minutes.rest.webservices.restfulwebservices.user.UserNotFoundException;
 
+//ControllerAdvice marks this class to let spring boot to handle the excep handling 
+//using common classes. 
+
+//this class is a central exception handler, where you should specify how to react
+//to specific exceptions, so have to define the exc type.
+
+//there is no need to define a customized exc handler if the default spring boot handler
+//cover your needs.
+
 @ControllerAdvice
 @RestController
 public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
